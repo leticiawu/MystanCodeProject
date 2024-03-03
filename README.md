@@ -1,6 +1,6 @@
 ### MystanCode Projects
 This repository holds my programming projects done during the period of stanCode SC101 course.
-<br> Please kindly find the projects below or **[Watch my DEMO VIDEOS!]**(https://youtube.com/playlist?list=PL0ImPjJGn-cODjSIvgFjj1BZFjYfI2yyP&feature=shared)
+<br> Please kindly find the projects below or **[Watch my DEMO VIDEOS!](https://youtube.com/playlist?list=PL0ImPjJGn-cODjSIvgFjj1BZFjYfI2yyP&feature=shared)**
 
 ### Project Source Codes:
 - Hangman Game**
