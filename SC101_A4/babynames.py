@@ -1,6 +1,6 @@
 """
 File: babynames.py
-Name: 
+Name: Leticia
 --------------------------
 SC101 Baby Names Project
 Adapted from Nick Parlante's Baby Names assignment by
@@ -24,18 +24,18 @@ def add_data_for_name(name_data, year, rank, name):
         This function modifies the name_data dict to store the provided
         name, year, and rank. This function does not return any value.
     """
-    # [ 未存過 ] 判斷當前名字有沒有在name data
+    # [Not stored] Check if the current name exists in name data
     if name in name_data:
-        # [ 已存在 ] 判斷當前名字的year是否存在name_data
+        # [Already exists] Check if the current name's year exists in name_data
         if year in name_data[name]:
-            # 判斷當前排名是否比現有排名靠前，如果有比較靠前，更新為「排名靠前的排名」
+            # Compare if the current rank is higher than the existing rank, if yes, update to the new higher rank
             if rank.isdigit() and int(rank) < int(name_data[name][year]):
                 name_data[name][year] = rank
         else:
-            # 當前名字的year「沒有」存在name_data，因此新增當前名稱year的key
+            # The current name's year does "not" exist in name_data, so add the current name-year as a key
             name_data[name][year] = rank
     else:
-        # 當前名字「沒有」在name data，新增在name_data的字典裡
+        # The current name does "not" exist in name data, add it to the name_data dictionary
         name_data[name] = {year: rank}
 
 
@@ -55,18 +55,18 @@ def add_file(name_data, filename):
     with open(filename, 'r') as f:
         for line in f:
             tokens = line.split(',')
-            # 年份拿出來單獨處理：
+            # Extract the year separately
             if len(tokens) == 1:
-                year = tokens[0].strip()    # 刪除字串的頭尾空格 和 換行
+                year = tokens[0].strip()    # Remove leading and trailing spaces and newline
             # tokenization
             else:
-                rank = tokens[0].strip()    # 要加strip()不然排行的字串還是會處理不到頭尾空格
+                rank = tokens[0].strip()
                 m_name = tokens[1].strip()   # baby male name
                 f_name = tokens[2].strip()   # baby female name
 
-                # 增加男嬰兒的data
+                # Add data for baby boys
                 add_data_for_name(name_data, year, rank, m_name)
-                # 增加女嬰兒的data
+                # Add data for baby girls
                 add_data_for_name(name_data, year, rank, f_name)
 
 
@@ -81,7 +81,7 @@ def read_files(filenames):
     Returns:
         name_data (dict): the dict storing all baby name data in a structured manner
     """
-    # 設定 name_data 初始值為空字典
+    # Set name_data as an empty dictionary
     name_data = {}
     for filename in filenames:
         add_file(name_data, filename)
@@ -103,10 +103,10 @@ def search_names(name_data, target):
         matching_names (List[str]): a list of all names from name_data that contain
                                     the target string
     """
-    # 設 names 初始值為空的列表
+    # Set names as an empty list
     names = []
     for name in name_data:
-        if target.lower() in name.lower():  # 兩邊都要加上lower()使其ㄧ致才可以在搜尋名字時找到 A 和 a
+        if target.lower() in name.lower():
             names.append(name)
 
     return names

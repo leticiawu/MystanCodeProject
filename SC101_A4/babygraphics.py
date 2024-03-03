@@ -1,6 +1,6 @@
 """
 File: babygraphics.py
-Name: 
+Name: Leticia
 --------------------------------
 SC101 Baby Names Project
 Adapted from Nick Parlante's Baby Names assignment by
@@ -43,10 +43,10 @@ def get_x_coordinate(width, year_index):
         x_coordinate (int): The x coordinate of the vertical line associated
                             with the current year.
     """
-    # 圖表裡年份之間的間隔
+    # Calculate the gap between years on the chart
     gap = (width - GRAPH_MARGIN_SIZE * 2) // len(YEARS)
 
-    # 算出座標 x
+    # Calculate the x coordinate
     x_coord = GRAPH_MARGIN_SIZE + year_index * gap
     return x_coord
 
@@ -62,22 +62,22 @@ def draw_fixed_lines(canvas):
 
     # ----- Write your code below this line ----- #
 
-    # 加底線 從左畫至右：左（x1,y1), 右（x2,y2)
+    # Draw the bottom line from left to right: Left (x1, y1), Right (x2, y2)
     canvas.create_line(GRAPH_MARGIN_SIZE, CANVAS_HEIGHT - GRAPH_MARGIN_SIZE,
                        CANVAS_WIDTH - GRAPH_MARGIN_SIZE, CANVAS_HEIGHT - GRAPH_MARGIN_SIZE, width=LINE_WIDTH)
 
-    # 加頂線 從左畫至右：左（x1,y1), 右（x2,y2)
+    # Draw the top line from left to right: Left (x1, y1), Right (x2, y2)
     canvas.create_line(GRAPH_MARGIN_SIZE, GRAPH_MARGIN_SIZE,
                        CANVAS_WIDTH - GRAPH_MARGIN_SIZE, GRAPH_MARGIN_SIZE, width=LINE_WIDTH)
 
-    # 加等距相同於 YEARS 裡的年份數量的垂直線：x1, x2 會變, y1, y2不變
+    # Draw evenly spaced vertical lines for each years: x1, x2 will vary, y1, y2 will remain constant
     for i in range(len(YEARS)):
         x_coord = get_x_coordinate(CANVAS_WIDTH, i)
 
-        # 加垂直的線
+        # Draw the vertical line
         canvas.create_line(x_coord, 0, x_coord, CANVAS_HEIGHT, width=LINE_WIDTH)
 
-        # 加年份的字
+        # Draw the year text
         text_x = x_coord + TEXT_DX
         text_y = CANVAS_HEIGHT - GRAPH_MARGIN_SIZE
         canvas.create_text(text_x, text_y, text=YEARS[i], anchor=tkinter.NW)
@@ -100,18 +100,24 @@ def draw_names(canvas, name_data, lookup_names):
 
     # ----- Write your code below this line ----- #
 
-    for i in range(len(lookup_names)):
-        name = lookup_names[i]
-
-        if name in name_data:
-            data = name_data[name]  # 從name_data取得相應的名字,年份, 排名，並儲存在data這個變數裡
-            color = COLORS[i % len(COLORS)]     # 取餘數來循環性的使用顏色
-            canvas.create_line(data, fill=color, width=LINE_WIDTH)  # 線的座標同 data, 顏色從color拿
-
-            for year in data:
-                x_coord = get_x_coordinate(CANVAS_WIDTH, YEARS.index(int(year)))
-                text_x = x_coord + TEXT_DX
-                text_y =
+    rank_h = (CANVAS_HEIGHT - GRAPH_MARGIN_SIZE * 2) / MAX_RANK
+    name_num = 0  # the order of name in lookup_names
+    for name in lookup_names:
+        x_list = []  # a list storing x coordinate every year
+        y_list = []  # a list storing y coordinate evey year
+        name_num += 1
+        for i in range(len(YEARS)):
+            x_list.append(get_x_coordinate(CANVAS_WIDTH, i))
+            color = COLORS[name_num % len(COLORS) - 1]
+            if str(YEARS[i]) in name_data[name]:
+                rank = name_data[name][str(YEARS[i])]
+                y_list.append(GRAPH_MARGIN_SIZE + int(rank) * rank_h)
+                canvas.create_text(x_list[i] + TEXT_DX, y_list[i], text=f'{name} {rank}', anchor=tkinter.SW, fill=color)
+            else:
+                y_list.append(CANVAS_HEIGHT - GRAPH_MARGIN_SIZE)
+                canvas.create_text(x_list[i] + TEXT_DX, y_list[i], text=f'{name} *', anchor=tkinter.SW, fill=color)
+            if i >= 1:
+                canvas.create_line(x_list[i - 1], y_list[i - 1], x_list[i], y_list[i], width=LINE_WIDTH, fill=color)
 
 
 # main() code is provided, feel free to read through it but DO NOT MODIFY

@@ -1,6 +1,6 @@
 """
 File: milestone1.py
-Name: 
+Name: Leticia
 -----------------------
 This file tests the milestone 1 for
 our babyname.py project
@@ -27,20 +27,19 @@ def add_data_for_name(name_data, year, rank, name):
         This function modifies the name_data dict to store the provided
         name, year, and rank. This function does not return any value.
     """
-    # 三功能：未存過、已存在、重複名稱的話存排名靠前的排名
-    # [ 未存過 ] 判斷當前名字有沒有在name data
+    # Not stored: Check if the current name exists in name data
     if name in name_data:
-        # [ 已存在 ] 判斷當前名字的year是否存在name_data
+        # Already exists: Check if the current name's year exists in name_data
         if year in name_data[name]:
-            # 以名字為創建的基礎，將男生和女生的相同名稱合併，之後查詢其名稱，透過同ㄧ個名字皆可找到男生和女生的排名
-            # 判斷當前排名是否比現有排名靠前，如果有比較靠前，更新為「排名靠前的排名」
+            # Merge the same names for males and females based on the name
+            # If the name is repeated, store the higher ranking
             if int(rank) < int(name_data[name][year]):
                 name_data[name][year] = rank
         else:
-            # 當前名字的year「沒有」存在name_data，因此新增當前名稱year的key
+            # If the current name's year does "not" exist in name_data, so add the current name-year as a key
             name_data[name][year] = rank
     else:
-        # 當前名字「沒有」在name data，新增在name_data的字典裡
+        # If the current name does "not" exist in name data, add it to the name_data dictionary
         name_data[name] = {year: rank}
 
 
