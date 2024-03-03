@@ -1,14 +1,14 @@
-## stanCode Projects
+### MystanCode Projects
 This repository holds my programming projects done during the period of stanCode SC101 course.
 Please kindly find the projects below or
 
 Watch my DEMO VIDEOS!
 
-## Project Source Codes:
+### Project Source Codes:
 + Hangman Game
-৹ python semantics & syntax
-#### ●  Weather Master
-৹ python semantics & syntax
+- python semantics & syntax
++ Weather Master
+- python semantics & syntax
 #### ●  MyPhotoshop
 ৹ image processing
 #### ●  Pedestrain Removing Application
