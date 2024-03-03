@@ -5,13 +5,13 @@ Please kindly find the projects below or
 Watch my DEMO VIDEOS!
 
 ### Project Source Codes:
-- **Hangman Game**
+- Hangman Game**
     - python semantics & syntax
-- **Weather Master**
+- Weather Master**
     - python semantics & syntax
-- **MyPhotoshop**
+- MyPhotoshop**
     - image processing
-- **Pedestrain Removing Application**
+- Pedestrain Removing Application**
     - image processing
 - [Breakout Game](https://github.com/leticiawu/MystanCodeProjects/blob/main/SC101_A2/breakout.py)
     - animation & game designing
