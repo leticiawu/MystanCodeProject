@@ -6,7 +6,7 @@ Watch my DEMO VIDEOS!
 
 ## Project Source Codes:
 ### ● Hangman Game
-      ৹ python semantics & syntax
+৹ python semantics & syntax
 ### ● Weather Master
       ৹ python semantics & syntax
 ● MyPhotoshop
