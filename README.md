@@ -3,11 +3,11 @@ This repository holds my programming projects done during the period of stanCode
 <br> Please kindly find the projects below or **[watch my DEMO VIDEOS!](https://youtu.be/v2O_MGE9_ao?feature=shared)**
 
 ### Project Source Codes:
-- Hangman Game**
+- [Hangman Game](SC001_A3/hangman.py)
     - python semantics & syntax
-- Weather Master**
+- Weather Master
     - python semantics & syntax
-- MyPhotoshop**
+- MyPhotoshop
     - image processing
 - Pedestrain Removing Application**
     - image processing
