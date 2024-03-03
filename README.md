@@ -13,7 +13,7 @@ This repository holds my programming projects done during the period of stanCode
     - image processing
 - [Breakout Game](https://github.com/leticiawu/MystanCodeProjects/blob/main/SC101_A2/breakout.py)
     - animation & game designing
-- Name Popularity Searching System
+- [Name Popularity Searching System](SC101_A4/babygraphics.py)
     - data structure
 - Boggle Game Solver
     - recursive functions
