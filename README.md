@@ -5,7 +5,7 @@ This repository holds my programming projects done during the period of stanCode
 ### Project Source Codes:
 - [Hangman Game](SC001_A3/hangman.py)
     - python semantics & syntax
-- Weather Master
+- [Weather Master](SC001_A2/weather_master.py)
     - python semantics & syntax
 - MyPhotoshop
     - image processing
