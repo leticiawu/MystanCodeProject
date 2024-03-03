@@ -15,5 +15,3 @@ This repository holds my programming projects done during the period of stanCode
     - animation & game designing
 - [Name Popularity Searching System](SC101_A4/babygraphics.py)
     - data structure
-- Boggle Game Solver
-    - recursive functions
