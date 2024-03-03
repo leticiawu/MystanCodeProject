@@ -9,7 +9,7 @@ This repository holds my programming projects done during the period of stanCode
     - python semantics & syntax
 - [MyPhotoshop](SC001_A4/best_photoshop_award.py)
     - image processing
-- Pedestrain Removing Application
+- [Pedestrain Removing Application](SC101_A3/stanCodoshop.py)
     - image processing
 - [Breakout Game](SC101_A2/breakout.py)
     - animation & game designing
