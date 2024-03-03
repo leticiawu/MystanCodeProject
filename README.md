@@ -7,15 +7,15 @@ Watch my DEMO VIDEOS!
 ### Project Source Codes:
 #### Hangman Game
 - python semantics & syntax
-#### ●  Weather Master
+#### Weather Master
 - python semantics & syntax
-#### ●  MyPhotoshop
-৹ image processing
-#### ●  Pedestrain Removing Application
-৹ image processing
-#### ●  [Breakout Game](https://github.com/leticiawu/MystanCodeProjects/blob/main/SC101_A2/breakout.py)
-৹ animation & game designing
-#### ●  Name Popularity Searching System
-৹ data structure
-#### ●  Boggle Game Solver
-৹ recursive functions
+#### MyPhotoshop
+- image processing
+#### Pedestrain Removing Application
+- image processing
+#### [Breakout Game](https://github.com/leticiawu/MystanCodeProjects/blob/main/SC101_A2/breakout.py)
+- animation & game designing
+#### Name Popularity Searching System
+- data structure
+#### Boggle Game Solver
+- recursive functions
