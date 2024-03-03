@@ -5,7 +5,7 @@ Please kindly find the projects below or
 Watch my DEMO VIDEOS!
 
 ## Project Source Codes:
-#### + ●  Hangman Game
++ Hangman Game
 ৹ python semantics & syntax
 #### ●  Weather Master
 ৹ python semantics & syntax
