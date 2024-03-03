@@ -5,7 +5,7 @@ Sonja Johnson-Yu, Kylie Jue, Nick Bowman,
 and Jerry Liao.
 
 File: breakout.py
-Name: 吳宇韻
+Name: Leticia
 
 This is a breakout game which allows gamers to destroy a brick
 wall by repeatedly bouncing a ball with a paddle underneath.
